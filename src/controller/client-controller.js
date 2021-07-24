@@ -32,12 +32,33 @@ module.exports = (app, db) => {
         .catch((e) => {
             console.log(e)
             res.status(500).json({
-                message: "cliente não pode se criado",
+                message: "cliente não pode ser criado",
                 e: true
             })
             
         })   
     
+})
+
+app.post('/Client/Delete', (req, res) => {
+    const{ID} = req.body
+    daoClient
+    .deleteClients(ID)
+    .then(() => {
+        res.status(200).json({
+            message: "Cliente deletado com sucesso",
+            e: false,
+        })
+    })
+    .catch((e) => {
+        console.log(e)
+        res.status(500).json({
+            message: "cliente não pode ser deletado",
+            e: true
+        })
+        
+    })   
+
 })
 
 

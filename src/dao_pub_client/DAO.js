@@ -33,6 +33,23 @@ insertClients(client) {
     })
 }
 
+
+deleteClients(client) {
+    return new Promise ((resolve, reject) => {
+        this.db.run(
+            `DELETE FROM CLIENT WHERE ID == (?)`, 
+            Object.values(client),
+            (e) => {
+                if(e){
+                    reject(e)
+            }  else{
+                resolve(true)
+            }
+        }
+        )
+    })
+}
+
 }
 
 module.exports = ClientDAO;
