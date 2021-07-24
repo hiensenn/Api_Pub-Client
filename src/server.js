@@ -1,18 +1,26 @@
 const express = require('express')
+
+
 const app = express()
-const bodyparser = require('body-parser')
-const sqlite3 = require('sqlite3').verbose()
 const port = 3001
-const client = require('./controller/client-controller')
-const db = new sqlite3.Database('db_client')
+
+const bodyparser = require('body-parser')
+
+const client_ = require('./controller/client-controller')
+
+const db = require('./infra/modeling_client')
+//const db = require('./infra/SQLite_db')
+
+
 app.use(bodyparser.json())
-
-const Client = require('./models/client-models')
-
-Client(app, db)
+app.use(express.json())
 
 
+
+client_(app, db)
 
 
 app.listen(port, () => { console.log("olá") } )
+
+
 

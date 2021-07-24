@@ -1,7 +1,8 @@
 class Client {
-    constructor(nome, numMesa, formaPagamento){
+    constructor(nome, numMesa, data, formaPagamento){
         this.nome = nome;
         this.numMesa = numMesa;
+        this.data = data;
         this.formaPagamento = formaPagamento;
     }
 }

@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/server.js"
+    "dev": "nodemon ./src/server.js",
+    "populate": "node ./src/infra/modeling_client.js"
   },
+
   "author": "Hiensen",
   "license": "ISC",
   "dependencies": {

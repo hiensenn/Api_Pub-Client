@@ -1,14 +1,44 @@
-module.exports = (app, Client) => {
+const ClientDAO = require('../dao_pub_client/DAO')
+const Clients = require('../models/client-models')
+
+module.exports = (app, db) => {
+
+    let daoClient = new ClientDAO(db)
 
     app.get('/Client', (req, res) => {
-        res.send(`rota ativa`)
+        daoClient
+        .getClients()
+        .then( (rows) => {
+            res.json( {
+                result:rows,
+                count: rows.length} )
+        }) 
+        .catch((e) => {
+            res.json({e})
+        })
     })
 
     app.post('/Client', (req, res) => {
+        const{nome, numMesa, data, formaPagamento} = req.body
+        let postClient = new Clients(nome, numMesa, data , formaPagamento);
+        daoClient
+        .insertClients(postClient)
+        .then(() => {
+            res.status(200).json({
+                message: "Cliente criado com sucesso",
+                e: false,
+            })
+        })
+        .catch((e) => {
+            console.log(e)
+            res.status(500).json({
+                message: "cliente não pode se criado",
+                e: true
+            })
+            
+        })   
     
-        const client = new Client(req.body.nome, req.body.numMesa, req.body.formaPagamento);
-        res.send(`mesa com cliente ocupada`);
-        console.log(req.body);
-    
+})
+
+
 }
-            )}
