@@ -1,26 +1,14 @@
 const express = require('express')
-
-
 const app = express()
-const port = 3001
+const port = 3031
+const bd = require('./infra/Sqlite3-bd')
+const cors = require('cors')
+const clienteController = require('./controllers/clienteControllers')
 
-const bodyparser = require('body-parser')
-
-const client_ = require('./controller/client-controller')
-
-const db = require('./infra/modeling_client')
-//const db = require('./infra/SQLite_db')
-
-
-app.use(bodyparser.json())
+app.use(cors())
 app.use(express.json())
 
+clienteController(app, bd)
 
-
-client_(app, db)
-
-
-app.listen(port, () => { console.log("olá") } )
-
-
-
+app.listen(port, () => console.log(`[INFO]
+Servidor rodando na porta : ${port}`))

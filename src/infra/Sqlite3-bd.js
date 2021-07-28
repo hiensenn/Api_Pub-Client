@@ -1,16 +1,12 @@
-
-const path = require('path');
-const caminhoArq = path.resolve(__dirname,'../','../','modeling_client.db')
-
 const sqlite3 = require('sqlite3').verbose();
-const bd = new sqlite3.Database(caminhoArq);
+const bd = new sqlite3.Database('./src/infra/bancoDados.db');
 
-//Processamento de sinal
+
 process.on('SIGINT', () =>
     bd.close(() => {
         console.log('BD encerrado!');
         process.exit(0);
     })
-);
+)
 
 module.exports = bd;
