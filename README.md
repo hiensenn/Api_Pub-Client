@@ -22,7 +22,7 @@ Tabela de conteúdos
 
 
 <h3>Projeto final do modulo 4 com o intuito de criar uma API restful aplicando as quatro operações 
-básicas utilizadas em bases de dados relacionais fornecidas aos utilizadores do nosso sistema. </h3>
+básicas utilizadas em bases de dados relacionais fornecidas aos utilizadores para a administração de um estabelecimento. </h3>
 
 
 ✅ CREATE <br/>
