@@ -142,13 +142,17 @@ Isso é feito, permitindo aos usuários criar e salvar solicitações HTTP e HTT
 <div id="get">
 </div>
 <h1>GET</h1>
-
+  
+<h3>observando o banco de dados</h3>
+  
 ![postman_get](https://user-images.githubusercontent.com/81387706/127377260-69eca30f-e865-43bc-87d9-4885cfbb1e8e.png)
 
 <div id="getId">
 </div>
 <h1>GET/ID</h1>
 
+  <h3>Procurando uma unidade via ID do meu banco de dados</h3>
+  
 ![postman_get_id](https://user-images.githubusercontent.com/81387706/127377289-7313586f-bc32-4c3d-8bb8-1466468e695d.png)
 
 <div id="post">
