@@ -10,5 +10,6 @@ app.use(express.json())
 
 clienteController(app, bd)
 
-app.listen(port, () => console.log(`[INFO]
-Servidor rodando na porta : ${port}`))
+app.listen(process.env.PORT || port
+    , () => console.log(`[INFO]
+Servidor rodando na porta : ${porprocess.env.PORT || port}`))
