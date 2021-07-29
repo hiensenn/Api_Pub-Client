@@ -196,10 +196,44 @@ Isso é feito, permitindo aos usuários criar e salvar solicitações HTTP e HTT
 
 <div id="testes">
 </div>
+  <h1 align="center">Testes Unitários</h1>
+  <h3>JEST</h3>
+  
+  <h3>📝Jest é um framework de teste em JavaScript projetado para garantir a correção de qualquer código JavaScript. </h3>
+  
+  ☑️ Abaixo estarei testando o fluxo de dados e as funcionalidades da minha api:
+  
+  🔵 Lista Clientes :
+  
+![jest_teste_1](https://user-images.githubusercontent.com/81387706/127409181-daab6c45-118f-457d-81e3-88945f877d90.png)
+  
+  🔵 Novos Clientes :
+  
+![jest_teste_2](https://user-images.githubusercontent.com/81387706/127409188-f67553c5-1a76-4198-a5da-8271a5c37bc0.png)
+  
+  ✅ Todos os testes passaram
+  
+![jest_teste_3](https://user-images.githubusercontent.com/81387706/127409191-ea8e0f9d-7f77-4973-ba0e-c637fd4b9b99.png)
+  
+  <h3>Imagem inteira </h3>
+  
+![jest_teste_4](https://user-images.githubusercontent.com/81387706/127409198-aa22b2f6-e281-41b8-80ae-4fab65b08868.png)
+  
 
 <div id="tecnologias">
 </div>
 
+  <h1>Bibliotecas e Tecnologias Usadas no projeto</h1>
+  
+### 🛠 
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+
+- [Node.js](https://nodejs.org/en/) - Linguagem utilizada
+- [Express](https://expressjs.com/pt-br/) - Usado para criar o servidor
+- [SQlite](https://www.sqlite.org/download.html) - Usado para a criação do banco de dados
+- [Nodemon](https://www.npmjs.com/package/nodemon) - ferramenta utilizada para o auxilio do servidor.
 
 
 
